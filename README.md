@@ -3,6 +3,7 @@
 ## Descrição
 
 Breve descrição do projeto e do problema que ele resolve.
+Será alterado o readme.md
 
 ## Instalação
 
