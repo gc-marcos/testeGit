@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta data-i18n="content" name="description" content="head-description">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title data-i18n="innerHTML">head-title</title>
+
+
+</head>
+
+<body>
+
+    <script>
+        fetch('i18n/pt-br.json')
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                const elementsToTranslate = document.querySelectorAll("[data-i18n]");
+                elementsToTranslate.forEach((element) => {
+                    const attributeValue = element.getAttribute("data-i18n");
+                    element[attributeValue] = data[element[attributeValue]]
+                })
+
+            })
+
+    </script>
+
+    <script>
+        function criaCarro(ano, modelo, cor) {
+            return {
+                id: Math.random().toString(36).substring(7),
+                ano, modelo, cor
+            };
+        }
+        criaCarro()
+        
+    </script>
+    <header>
+        <p>Marcos Carvalho</p>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About me</a>
+            <a href="#">Portifolio</a>
+            <a href="#">Reviews</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact</a>
+
+        </nav>
+
+
+        <button data-i18n="innerHTML">page-contact</button>
+
+    </header>
+    <main>
+
+        <section id="preview">
+
+            <h1>HEY! <strong> I’m Laura, UI/UX </strong>designer</h1>
+            <p>Agency-quality Webflow websites with the personal touch of a freelancer.</p>
+            <div id="redes">
+                <a id="rede-social" href="https://www.linkedin.com/in/gc-marcos/" target="_blank" alt="Linkdin">
+                    <img src="img/Frame (1).svg" width="55" height="55" alt="Linkedin">
+                </a>
+
+                <a id="rede-social" href="https://www.linkedin.com/in/gc-marcos/" target="_blank" alt="Linkdin">
+                    <img src="img/Frame.svg" width="55" height="55" alt="Linkedin">
+                </a>
+
+                <a id="rede-social" href="https://www.linkedin.com/in/gc-marcos/" target="_blank" alt="Linkdin">
+                    <img src="img/Vector.svg" width="38" height="55" alt="Linkedin">
+                </a>
+            </div>
+            <figure>
+                <img id="fundoFoto" src="img/squers  - option 1.svg" />
+                <img src="img/main image.svg" id="sobrepor" />
+            </figure>
+            <svg id="imgFundo" width="100vw" viewBox="0 0 1728 719" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M-187.63 488.465C-161.611 488.465 36.1265 712.221 297.795 712.221C661.305 712.221 857.027 -102.901 1369 124.955C1774.88 305.595 1953.29 324.923 2027.63 199.292"
+                    stroke="#D3D5D6" />
+                <path
+                    d="M-187.63 295.187C-164.585 312.285 36.1265 712.221 297.795 712.221C661.305 712.221 916.497 -13.6961 1428.47 214.16C1834.35 394.8 1898.28 365.808 2027.63 273.63"
+                    stroke="#D3D5D6" />
+                <path
+                    d="M-187.63 607.405C-161.611 607.405 36.1265 718.168 297.795 718.168C661.305 718.168 861.272 -235.938 1339.26 56.5639C1687.91 269.913 1893.82 354.658 2027.63 258.762"
+                    stroke="#D3D5D6" />
+            </svg>
+
+        </section>
+
+        <section id="portifolio">
+            <ul id="listaLogo">
+                <li>
+                    <img id="logo" src="img/Ellipse 2163.png" />
+                </li>
+                <li>
+                    <img id="logo" style="margin-top: 50px;" src="img/Ellipse 2164.svg" />
+                </li>
+                <li>
+                    <img id="logo" style="align-self: center;  margin: 30px 200px" src="img/f.svg" />
+                </li>
+                <li>
+                    <img id="logo" src="img/z.svg" />
+                </li>
+                <li>
+                    <img id="logo" style="margin-top: 50px;" src="img/Group 35888.png" />
+                </li>
+            </ul>
+
+            <ul id="listaCartao">
+                <h3>I specialize in</h3>
+                <li class="cartao" style="transform: rotate(-2deg);">
+                    1
+                    <h5><strong>Webflow</strong></h5>
+                    <p>I also use Client First system for class naming structure, which allows me to build any project
+                        fast and conveniently.</p>
+                </li>
+                <li class="cartao" style="transform: rotate(2deg);">
+                    2
+                    <h5><strong>Webflow</strong></h5>
+                    <p>I also use Client First system for class naming structure, which allows me to build any project
+                        fast and conveniently.</p>
+                </li>
+                <li class="cartao" style="transform: rotate(-2deg);">
+                    3
+                    <h5><strong>Webflow</strong></h5>
+                    <p>I also use Client First system for class naming structure, which allows me to build any project
+                        fast and conveniently.</p>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- <section>
+            <p>Re-Design For WEb designer Portfolio</p>
+            <div>
+                <button>User Research</button>
+                <button>UX Design</button>
+            </div>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout.</p>
+
+            <button>Read Case Study</button>
+
+            <img src="#" alt="Portiflio" srcset="">
+
+        </section> -->
+
+
+
+        <section id="avaliacaoCliente">
+            <h3>Customers reviews</h3>
+            <img src="img/Images bg.svg" alt="">
+            <figcaption>
+                <img src="img/Avatar.svg" alt="Avatar">
+                <div>
+                    <p>To ensure that the Community continues to be the best place to find Figma resources, we ask that
+                        you avoid the following </p>
+                    <p>Anna Writens</p>
+                    <a href="#">Designer</a>
+                </div>
+            </figcaption>
+            <figcaption>
+                <img src="img/Avatar.svg" alt="">
+                <div>
+                    <p>To ensure that the Community continues to be the best place to find Figma resources, we ask that
+                        you avoid the following </p>
+                    <p>Anna Writens</p>
+                    <a href="#">Designer</a>
+                </div>
+            </figcaption>
+            <figcaption>
+                <img src="img/Avatar.svg" alt="">
+                <div>
+                    <p>To ensure that the Community continues to be the best place to find Figma resources, we ask that
+                        you avoid the following </p>
+                    <p>Anna Writens</p>
+                    <a href="#">Designer</a>
+                </div>
+            </figcaption>
+            <img src="img/Images bg (1).svg" alt="" srcset="">
+        </section>
+
+        <section>
+            <figure>
+                <img src="#" alt="">
+            </figure>
+            <div>
+                <button>linkdin</button>
+                <button>Imprimir</button>
+            </div>
+            <section>
+                <p>Try me out, risk free!</p>
+                <p>If you’re not happy with the design after the first draft,
+                    I’ll refund your deposit, no questions asked</p>
+                <button>Contavt -></button>
+            </section>
+
+        </section>
+
+    </main>
+    <footer>Made with ❤️️ by me.Got a question? <a href="#">email</a></footer>
+</body>
+
+</html>
